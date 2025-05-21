@@ -54,9 +54,43 @@
         </div>
     </div>
     <main>
-        <div>
+        <div class="Judul" >
+            <h2>Jam Operasional</h2>
+            <p> SETIAP HARI</p>
+            <p> 08.00-23.00</p>
+
+
         </div>
     </main>
+    <h2>Tinggalkan Komentar</h2>
+
+    @if (session('success'))
+        <div style="color: green;">{{ session('success') }}</div>
+    @endif
+
+    <form action="{{ route('komentar.store') }}" method="POST">
+        @csrf
+        <input type="text" name="nama" placeholder="Nama" required><br>
+        <textarea name="isi" placeholder="Isi komentar..." required></textarea><br>
+        <button type="submit">Kirim Komentar</button>
+    </form>
+
+    <hr>
+
+    <h3>Daftar Komentar</h3>
+        @foreach($komentars as $komentar)
+        <div style="margin-bottom: 10px;">
+            <strong>{{ $komentar->nama }}</strong><br>
+            <p>{{ $komentar->isi }}</>
+
+            <form action="{{ route('komentar.destroy', $komentar->id) }}" method="POST" onsubmit="return confirm('Hapus komentar ini?')">
+                @csrf
+                @method('DELETE')
+                <button type="submit">Hapus</button>
+            </form>
+        </div>
+    @endforeach
+
     <footer>
         <p>&copy; 2025 Kedai Kopi DERS.KOPI. All rights reserved.</p>
         <p>

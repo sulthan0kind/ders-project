@@ -47,10 +47,8 @@
     <main>
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>jika Punya pertanyaan bisa cek <a href="https://instagram.com/ders.kopi" target="_blank">Instagram</a> kami</p>
-            <p> .</p>
-            <p> .</p>
-            <p> .</p>
+            <p>jika punya pertanyaan bisa telpon kami di +6281998997550</p>
+            <p>atau juga bisa cek <a href="https://instagram.com/ders.kopi" target="_blank">Instagram</a> kami</p>
             <p> .</p>
             <p> .</p>
             <p> .</p>

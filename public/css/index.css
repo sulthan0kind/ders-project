@@ -74,6 +74,8 @@ nav ul li a:hover {
     z-index: 0;
 }
 
+
+
 .hero-text {
     position: relative;
     z-index: 1;
@@ -89,6 +91,10 @@ nav ul li a:hover {
 
 .hero-text p {
     font-size: 1.2rem;
+}
+
+main div {
+    width: 230px;
 }
 
 
